@@ -1,0 +1,29 @@
+#root, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.title {
+  text-align: center;
+}
+
+.NewForm {
+  text-align: center;
+}
+
+.input {
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 1.5%;
+}
+
+.submit {
+  display: block;
+}
+
+.header {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-image: linear-gradient(#e3e3e3, #b3b3b3);
+}

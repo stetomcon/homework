@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import axios from 'axios';
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import './css/skeleton.css';
+import './css/normalize.css';
 import NewForm from './components/NewForm.js'
 
 let baseURL = process.env.REACT_APP_BASEURL
@@ -29,22 +30,25 @@ componentDidMount() {
 
 render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Bookmarks</h1>
+    <div>
+      <header className = 'header'>
+        <h1 className = 'title'>Bookmarks!</h1>
       </header>
+      <div className = 'NewForm'>
+        <NewForm />
+      </div>
       <div>
-      <table>
-        <tbody>
-          {
-            this.state.bookmark.map((bookmark) => {
-              return <tr key={bookmark._id}>
-                <td>{bookmark.name}</td>
-              </tr>
-            })
-          }
-        </tbody>
-      </table>
+        <table>
+          <tbody>
+            {
+              this.state.bookmark.map((bookmark) => {
+                return <tr key={bookmark._id}>
+                          <td>{bookmark.name}</td>
+                       </tr>
+              })
+            }
+          </tbody>
+        </table>
       </div>
     </div>
   );
