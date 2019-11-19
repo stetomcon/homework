@@ -9,6 +9,13 @@ class NewForm extends Component {
             address: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({
+            [event.currentTarget.name]: event.currentTarget.value
+        })
     }
 
     async handleSubmit(event) {
@@ -28,9 +35,11 @@ class NewForm extends Component {
         return(
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor=''></label>
-                <input type='text' id='name' name='name' value={this.state.name}></input>
-                <input type='text' id='address' name='address' value={this.state.address}></input>
-                <input type='submit' value='Add'></input>
+                <div className = 'form'>
+                    <input type='text' id='name' name='name' onChange={this.handleChange} value={this.state.name}  className = 'input'></input>
+                    <input type='text' id='address' name='address' onChange={this.handleChange} value={this.state.address} className = 'input'></input>
+                </div>
+                <input type='submit' value='Add' className = 'submit'></input>
             </form>
         )
     }
