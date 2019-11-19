@@ -7,10 +7,6 @@ const cors = require('cors')
 //CONTROLLERS
 const bookmarkController = require('./controllers/bookmark.js')
 
-app.use('/', (req, res) => {
-    res.send('go to /bookmark')
-})
-
 const whitelist = ['http://localhost:3000', '']
 const corsOptions = {
     origin: (origin, callback) => {
