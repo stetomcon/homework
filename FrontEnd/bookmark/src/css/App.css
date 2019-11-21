@@ -1,21 +1,55 @@
-#root, body {
+#root {
   margin: 0;
   padding: 0;
+  background-color:black;
 }
 
+.wreckdabody{
+  background-color: black;
+  background-image: url('../Image/book1.jpg');
+}
 
+.middle {
+  text-align: center;
+  display: inline-block;
+}
+
+.in {
+  margin-right: 1%;
+  color: white;
+  font-display: fallback; 
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.anch {
+  color: white;
+
+}
+.anch:hover {
+  color:#E45837;
+
+}
 .title {
   text-align: center;
+  font-family: 'Calistoga', cursive;
+  font-size: 100px;
+  padding-top: 10%;
+  color:#E45837;
 }
 
 .NewForm {
   text-align: center;
 }
+.buttons {
+  text-align: center;
+  color: red;
+}
 
 .input {
-  margin-right: 1%;
-  margin-left: 1%;
-  margin-bottom: 1.5%;
+  margin: 2% 1% 1.5% 1%;
+
 }
 
 .submit {
@@ -25,5 +59,16 @@
 .header {
   padding-top: 1%;
   padding-bottom: 1%;
-  background-image: linear-gradient(#e3e3e3, #b3b3b3);
+  background-color: black;
+  font-size: 20px;
+  color: white;
+
+}
+a{
+  color: azure;
+  text-decoration:inherit
+}
+a:hover{
+  color: #E45837;
+  text-decoration:inherit
 }
